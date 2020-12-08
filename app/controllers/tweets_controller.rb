@@ -3,18 +3,28 @@ class TweetsController < ApplicationController
   # before_action :move_to_index, except: [:index, :show,:search]
 
  def index
-  #  @tweets = Tweet.includes(:user).order("created_at DESC")
+   @tweets = Tweet.includes(:user).order("created_at DESC")
   #  query = "SELECT * FROM tweets"
   #  @tweets = Tweet.find_by_sql(query)
  end
 
-#  def new
-#    @tweet = Tweet.new
-#  end
+ def new
+  if user_signed_in?
+    @tweet = Tweet.new
+  else
+    redirect_to user_session_path
+  end
+ end
 
-#  def create
-#    Tweet.create(tweet_params)
-#  end
+ def create
+   Tweet.create(tweet_params)
+  #  @tweet = Tweet.new(tweet_params)
+  #  if @tweet.save
+  #    redirect_to root_path
+  #  else
+  #    render new_item_path
+  #  end
+ end
 
 #  def destroy
 #   tweet = Tweet.find(params[:id])
@@ -39,10 +49,10 @@ class TweetsController < ApplicationController
 #  end
 
 
-#  private
-#  def tweet_params
-#    params.require(:tweet).permit(:image,:text).merge(user_id: current_user.id)
-#  end
+ private
+ def tweet_params
+   params.require(:tweet).permit(:image,:text).merge(user_id: current_user.id)
+ end
 
 #  def set_tweet
 #   @tweet = Tweet.find(params[:id])
