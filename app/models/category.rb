@@ -8,5 +8,7 @@ class Category < ActiveHash::Base
     { id: 6, name: '5' },
     { id: 7, name: '6' },
   ]
+  
+  include ActiveHash::Associations
   has_many :tweets
   end

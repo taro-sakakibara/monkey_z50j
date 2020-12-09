@@ -6,8 +6,10 @@ class Tweet < ApplicationRecord
     validates :image
   end
 
- belongs_to :user
- belongs_to :category
- has_many :comments, dependent: :destroy
- has_one_attached :image
+  belongs_to :user
+  has_many :comments, dependent: :destroy
+  has_one_attached :image
+
+  extend ActiveHash::Associations::ActiveRecordExtensions
+  belongs_to :category
 end

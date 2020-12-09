@@ -1,6 +1,6 @@
- <div class="content_post" style="background-image: url(<%= tweet.image %>);">
+ <div class="content_post" style="background-image: url(<%= rails_blob_path(tweet.image) %>);">
       <div class="more">
-        <span><%= image_tag 'arrow_top.png' %></span>
+        <%# <span><%= image_tag 'arrow_top.png'</span>  %>
         <ul class="more_list">
           <li>
             <%= link_to '詳細', tweet_path(tweet.id), method: :get %>
@@ -20,7 +20,6 @@
       <a href="/users/<%= tweet.user.id %>">
           <span>投稿者</span><%= tweet.user.nickname %>
         </a>
-        <%#
-        <%= tweet.name %>
+        <%# <%= tweet.name %>
       </span>
     </div>

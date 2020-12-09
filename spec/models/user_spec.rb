@@ -64,7 +64,7 @@ RSpec.describe User, type: :model do
         @user.valid?
         expect(@user.errors.full_messages).to include("Profile can't be blank")
       end
-      it 'profileが140文字以上だと登録出来ない' do
+      it 'profileが141文字以上だと登録出来ない' do
         @user.profile = SecureRandom.alphanumeric(141)
         @user.valid?
         expect(@user.errors.full_messages).to include("Profile is too long (maximum is 140 characters)")
