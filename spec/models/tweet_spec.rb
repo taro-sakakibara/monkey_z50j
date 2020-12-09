@@ -25,7 +25,7 @@ RSpec.describe Tweet, type: :model do
       it 'category_idが1だと投稿できない' do
         @tweet.category_id = 1
         @tweet.valid?
-        expect(@tweet.errors.full_messages).to include("Category must be other than 1")
+        expect(@tweet.errors.full_messages).to include('Category must be other than 1')
       end
       it 'textが空だと投稿できない' do
         @tweet.text = nil
@@ -35,7 +35,7 @@ RSpec.describe Tweet, type: :model do
       it 'textが141文字以上だと投稿できない' do
         @tweet.text = SecureRandom.alphanumeric(141)
         @tweet.valid?
-        expect(@tweet.errors.full_messages).to include("Text is too long (maximum is 140 characters)")
+        expect(@tweet.errors.full_messages).to include('Text is too long (maximum is 140 characters)')
       end
     end
   end
