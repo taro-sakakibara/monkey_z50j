@@ -25,10 +25,11 @@ class TweetsController < ApplicationController
     end
   end
 
-  #  def destroy
-  #   tweet = Tweet.find(params[:id])
-  #   tweet.destroy
-  #  end
+  def destroy
+    @tweet = Tweet.find(params[:id])
+    redirect_to root_path if user_signed_in? && current_user.id == @tweet.user_id
+    @tweet.destroy
+  end
 
   #  def edit
   #  end
