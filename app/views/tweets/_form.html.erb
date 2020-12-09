@@ -1,5 +1,26 @@
    <%= form_with(model: tweet, local: true) do |form| %>
-      <%= form.text_field :image, placeholder: "Image Url" %>
+    <%= render 'layouts/error_messages', model: form.object %>
+    <%# 出品画像 %>
+    <div class="img-upload">
+      <%# <div class="weight-bold-text">
+        出品画像
+        <span class="indispensable">必須</span>
+      </div> %>
+              <div class="weight-bold-text">
+          カテゴリー
+          <span class="indispensable">必須</span>
+        </div>
+        <%= form.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
+        <div class="weight-bold-text">
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= form.file_field :image, id:"item-image" %>
+      </div>
+    </div>
+    <%# /出品画像 %>
+      <%# <%= form.text_field :image, placeholder: "Image Url" %> 
       <%= form.text_area :text, placeholder: "text", rows: "10" %>
       <%= form.submit "SEND" %>
     <% end %>

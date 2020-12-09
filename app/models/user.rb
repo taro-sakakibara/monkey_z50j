@@ -5,9 +5,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   with_options presence: true do
-    validates :nickname,length:{maximum:6}
+    validates :nickname, length: { maximum: 6 }
     validates :birthday
-    validates :profile, length:{maximum:140}
+    validates :profile, length: { maximum: 140 }
   end
 
   validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i, message: 'Include both letters and numbers' }
@@ -15,5 +15,4 @@ class User < ApplicationRecord
   has_many :tweets, dependent: :destroy
   has_many :comments, dependent: :destroy
   has_one_attached :image
-         
 end

@@ -25,7 +25,7 @@ RSpec.describe User, type: :model do
       it 'emailに@が含まれないと登録出来ない' do
         @user.email = 'aaa'
         @user.valid?
-        expect(@user.errors.full_messages).to include("Email is invalid")
+        expect(@user.errors.full_messages).to include('Email is invalid')
       end
       it 'passwordが空だと登録出来ない' do
         @user.password = ''
@@ -64,10 +64,10 @@ RSpec.describe User, type: :model do
         @user.valid?
         expect(@user.errors.full_messages).to include("Profile can't be blank")
       end
-      it 'profileが140文字以上だと登録出来ない' do
+      it 'profileが141文字以上だと登録出来ない' do
         @user.profile = SecureRandom.alphanumeric(141)
         @user.valid?
-        expect(@user.errors.full_messages).to include("Profile is too long (maximum is 140 characters)")
+        expect(@user.errors.full_messages).to include('Profile is too long (maximum is 140 characters)')
       end
     end
   end
