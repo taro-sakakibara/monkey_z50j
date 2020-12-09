@@ -4,6 +4,7 @@ class TweetsController < ApplicationController
 
   def index
     @tweets = Tweet.includes(:user).order('created_at DESC')
+    @tweets2 = Tweet.includes(:user).where(category_id: 2).sample(1)
   end
 
   def new

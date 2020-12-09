@@ -1,3 +1,3 @@
-<div class="contents row">
-  <%= tweet_lists(@tweets) %>
-</div>
+<%if Time.now.hour > 0 %>
+   <%= render "index2" %>
+   <%end%>
