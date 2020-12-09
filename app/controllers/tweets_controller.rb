@@ -1,11 +1,9 @@
 class TweetsController < ApplicationController
   before_action :set_tweet, only: [:destroy]
-  # before_action :move_to_index, except: [:index, :show,:search]
+  before_action :authenticate_user!, except: [:index]
 
   def index
     @tweets = Tweet.includes(:user).order('created_at DESC')
-    #  query = "SELECT * FROM tweets"
-    #  @tweets = Tweet.find_by_sql(query)
   end
 
   def new
@@ -26,26 +24,8 @@ class TweetsController < ApplicationController
   end
 
   def destroy
-    redirect_to root_path if user_signed_in? && current_user.id == @tweet.user_id
     @tweet.destroy
   end
-
-  #  def edit
-  #  end
-
-  #  def update
-  #   tweet = Tweet.find(params[:id])
-  #   tweet.update(tweet_params)
-  #  end
-
-  #  def show
-  #   @comment = Comment.new
-  #   @comments = @tweet.comments.includes(:user)
-  #  end
-
-  #  def search
-  #   @tweets = SearchTweetsService.search(params[:keyword])
-  #  end
 
   private
 
@@ -53,13 +33,7 @@ class TweetsController < ApplicationController
     params.require(:tweet).permit(:image, :text, :category_id).merge(user_id: current_user.id)
   end
 
-   def set_tweet
+  def set_tweet
     @tweet = Tweet.find(params[:id])
-   end
-
-  #  def move_to_index
-  #   unless user_signed_in?
-  #     redirect_to action: :index
-  #   end
-  # end
+  end
 end
