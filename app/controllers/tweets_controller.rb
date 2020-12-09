@@ -1,5 +1,5 @@
 class TweetsController < ApplicationController
-  # before_action :set_tweet, only: [:edit, :show]
+  before_action :set_tweet, only: [:destroy]
   # before_action :move_to_index, except: [:index, :show,:search]
 
   def index
@@ -26,7 +26,6 @@ class TweetsController < ApplicationController
   end
 
   def destroy
-    @tweet = Tweet.find(params[:id])
     redirect_to root_path if user_signed_in? && current_user.id == @tweet.user_id
     @tweet.destroy
   end
@@ -54,9 +53,9 @@ class TweetsController < ApplicationController
     params.require(:tweet).permit(:image, :text, :category_id).merge(user_id: current_user.id)
   end
 
-  #  def set_tweet
-  #   @tweet = Tweet.find(params[:id])
-  #  end
+   def set_tweet
+    @tweet = Tweet.find(params[:id])
+   end
 
   #  def move_to_index
   #   unless user_signed_in?
