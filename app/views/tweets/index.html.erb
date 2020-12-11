@@ -1,3 +1,17 @@
-<div class="contents row">
-  <%= tweet_lists(@tweets) %>
-</div>
+<%if Time.now.hour >= 5 && Time.now.hour <= 7%>
+   <%= render "index_5to7" %>
+   <%elsif Time.now.hour >= 8 && Time.now.hour <= 11%>
+      <%= render "index_8to11" %>
+   <%elsif Time.now.hour >= 12 && Time.now.hour <= 13%>
+      <%= render "index_12to13" %>
+   <%elsif Time.now.hour >= 14 && Time.now.hour <= 16%>
+      <%= render "index_14to16" %>
+   <%elsif Time.now.hour >= 17 && Time.now.hour <= 19%>
+      <%= render "index_17to19" %>
+   <%elsif Time.now.hour >= 20 && Time.now.hour <= 22%>
+      <%= render "index_20to22" %>
+   <%elsif Time.now.hour >= 23 && Time.now.hour <= 24%>
+      <%= render "index_23to4" %>
+   <%elsif Time.now.hour >= 0 && Time.now.hour <= 4%>
+      <%= render "index_23to4" %>
+<%end%>

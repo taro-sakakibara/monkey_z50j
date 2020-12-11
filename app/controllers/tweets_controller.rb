@@ -4,6 +4,13 @@ class TweetsController < ApplicationController
 
   def index
     @tweets = Tweet.includes(:user).order('created_at DESC')
+    @tweets_5to7 = Tweet.includes(:user).where(category_id: 2).sample(1)
+    @tweets_8to11 = Tweet.includes(:user).where(category_id: 3).sample(1)
+    @tweets_12to13 = Tweet.includes(:user).where(category_id: 4).sample(1)
+    @tweets_14to16 = Tweet.includes(:user).where(category_id: 5).sample(1)
+    @tweets_17to19 = Tweet.includes(:user).where(category_id: 6).sample(1)
+    @tweets_20to22 = Tweet.includes(:user).where(category_id: 7).sample(1)
+    @tweets_23to4 = Tweet.includes(:user).where(category_id: 8).sample(1)
   end
 
   def new
