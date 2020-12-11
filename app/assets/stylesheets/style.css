@@ -993,7 +993,7 @@ div.contents.row div.content_post p {
   left: 100px;
   right: 100px;
   bottom: 500px;
-  margin: 5em auto;
+  margin: 5em, auto;
   padding: 1em;
   font-size: 20px;
   z-index: 2;
