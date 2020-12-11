@@ -6,7 +6,8 @@ class Category < ActiveHash::Base
     { id: 4, name: '今日のサラダ' },
     { id: 5, name: '今日の休憩' },
     { id: 6, name: '今日の成果' },
-    { id: 7, name: '今日のお風呂' }
+    { id: 7, name: '今日のお風呂' },
+    { id: 8, name: '今日の睡眠' }
   ]
 
   include ActiveHash::Associations
