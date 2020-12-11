@@ -1,6 +1,17 @@
-<div class="contents row">
-  <p><%= @nickname %>さんの投稿一覧</p>
-  <% @tweets.each do |tweet| %>
-    <%= render partial: "tweets/tweet", locals: { tweet: tweet } %>
-     <% end %>
-    </div>
+<%if Time.now.hour >= 5 && Time.now.hour <= 7%>
+   <%= render "show_5to7" %>
+   <%elsif Time.now.hour >= 8 && Time.now.hour <= 11%>
+      <%= render "show_8to11" %>
+   <%elsif Time.now.hour >= 12 && Time.now.hour <= 13%>
+      <%= render "show_12to13" %>
+   <%elsif Time.now.hour >= 14 && Time.now.hour <= 16%>
+      <%= render "show_14to16" %>
+   <%elsif Time.now.hour >= 17 && Time.now.hour <= 19%>
+      <%= render "show_17to19" %>
+   <%elsif Time.now.hour >= 20 && Time.now.hour <= 22%>
+      <%= render "show_20to22" %>
+   <%elsif Time.now.hour >= 23 && Time.now.hour <= 24%>
+      <%= render "show_23to4" %>
+   <%elsif Time.now.hour >= 0 && Time.now.hour <= 4%>
+      <%= render "show_23to4" %>
+<%end%>

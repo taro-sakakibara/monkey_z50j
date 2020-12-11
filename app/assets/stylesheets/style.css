@@ -100,6 +100,12 @@ h1 {
   margin: 0.67em 0;
 }
 
+.category{
+ font-size: 50px;
+ text-align: center;
+ padding: 20px;
+}
+
 /*
  * Address styling not present in IE 8/9, Safari 5, and Chrome. */
 abbr[title] {
@@ -635,6 +641,7 @@ ul li {
 }
 
 /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
+
 .time_5to7,
 body,
 html {
@@ -659,7 +666,7 @@ html {
 .time_14to16,
 body,
 html {
-  height: 100%;
+  height: 100vh;
   background-color: #c4a718;
 }
 
@@ -980,14 +987,18 @@ div.contents.row div.content_post .more ul.more_list li a:hover {
 
 div.contents.row div.content_post p {
   position: absolute;
-  left: 30px;
+  text-align: center;
+  word-wrap: break-word;
+  top: 400px;
+  left: 100px;
   right: 100px;
-  bottom: 30px;
-  margin: 0;
+  bottom: 500px;
+  margin: 5em auto;
+  padding: 1em;
   font-size: 20px;
   z-index: 2;
   font-weight: bold;
-  text-shadow: 0 0 2px #000, 0 0 1px #000, 0 0 1px #000;
+  /* text-shadow: 0 0 2px #000, 0 0 1px #000, 0 0 1px #000; */
 }
 
 div.contents.row div.content_post span.name {
@@ -998,7 +1009,7 @@ div.contents.row div.content_post span.name {
   font-size: 13px;
 }
 
-div.contents.row div.content_post span.name a {
+div.contents.row  span.name a {
   display: block;
   color: #aaa;
 }
@@ -1078,9 +1089,17 @@ form input[type="submit"]:hover {
 }
 
 footer {
-  margin: 30px auto;
+  margin: 0px auto;
   padding: 10px;
   color: #D8D8D8;
+  border-bottom: 1px solid #D8D8D8;
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  height: 62px;
 }
 
 footer p {
