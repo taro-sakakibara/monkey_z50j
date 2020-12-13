@@ -70,7 +70,7 @@ setInterval(flipCSS,1000);
   <body>
   <header class="header">
     <div class="header__bar row">
-      <h1 class="grid-6"><a href="/">Monkey.z50j</a></h1>
+      <h1 class="grid-6"><a href="/"><div class="a-1">Monkey</div><div class="a-2">.z50j</div></a></h1>
       <% if user_signed_in? %>
         <div class="user_nav grid-6">
           <span><%= current_user.nickname %>
@@ -90,6 +90,7 @@ setInterval(flipCSS,1000);
         </div>
       <% end %>
     </div>
+    </div>
   </header>
     <%= yield %>
      <footer>
@@ -98,5 +99,4 @@ setInterval(flipCSS,1000);
       </p>
     </footer>
   </body>
-  </div>
 </html>
