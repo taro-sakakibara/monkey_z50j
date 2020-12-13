@@ -705,9 +705,13 @@ body {
   line-height: 1.57;
   letter-spacing: 0.15em;
   font-size: 16px;
-  color: rgb(67, 66, 66);
+  color: rgb(107, 88, 88);
   font-family: 'Unica One', "Avenir", "游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro W6", "HIragino Kaku Gothic Pro W6", "HIragino Kaku Gothic Pro", Osaka, Meiryo, "メイリオ", "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
   margin: 0;
+}
+
+span{
+  color:#fff
 }
 
 a {
@@ -845,7 +849,7 @@ header.header .user_nav span {
   margin-left: 30px;
   width: 150px;
   height: 50px;
-  font-size: 1em;
+  font-size: 1.2em;
   cursor: pointer;
   position: relative;
 }
@@ -871,9 +875,9 @@ header.header .user_nav ul {
   box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-header.header .user_nav ul li {
+/* header.header .user_nav ul li {
   background-color: #f0f0f0;
-}
+} */
 
 header.header .user_nav ul li a {
   display: block;
@@ -1112,37 +1116,43 @@ footer {
 
 .time_5to7,
 footer,
-header.header {
+header.header,
+header.header .user_nav ul li {
 background-color: #6fddee5e;
 }
 
 .time_8to11,
 footer,
-header.header {
+header.header,
+header.header .user_nav ul li {
 background-color: #1ec2f08f;
 }
 
 .time_12to13,
 footer,
-header.header {
+header.header,
+header.header .user_nav ul li {
 background-color: #1edbf08f;
 }
 
 .time_14to16,
 footer,
-header.header {
+header.header,
+header.header .user_nav ul li {
 background-color: #c45e168f;
 }
 
 .time_17to19,
 footer,
-header.header {
+header.header,
+header.header .user_nav ul li {
 background-color: #de26116f;
 }
 
 .time_20to22,
 footer,
-header.header {
+header.header,
+header.header .user_nav ul li {
 background-color: #110630b8;
 }
 
