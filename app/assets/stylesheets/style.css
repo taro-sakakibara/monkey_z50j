@@ -642,13 +642,13 @@ ul li {
 
 /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
 
-.time_5to7,
+/* .time_5to7, */
 body,
 html {
   height: 100%;
   background-color: #f5f5f3;
 }
-
+/* 
 .time_8to11,
 body,
 html {
@@ -689,7 +689,7 @@ body,
 html {
   height: 100%;
   background-color: #041c63;
-}
+} */
 
 body {
   padding-top: 60px;
@@ -705,14 +705,14 @@ body {
   line-height: 1.57;
   letter-spacing: 0.15em;
   font-size: 16px;
-  color: #666;
+  color: rgb(67, 66, 66);
   font-family: 'Unica One', "Avenir", "游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro W6", "HIragino Kaku Gothic Pro W6", "HIragino Kaku Gothic Pro", Osaka, Meiryo, "メイリオ", "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
   margin: 0;
 }
 
 a {
   text-decoration: none;
-  color: #666;
+  color: #fff;
 }
 
 a:hover {
@@ -757,8 +757,8 @@ form input[type="submit"] {
 header.header div.header__bar.row div.grid-6 a.post {
   padding: 8px 20px;
   font-size: 14px;
-  border: 2px solid #57C3E9;
-  color: #57C3E9;
+  border: 2px solid #fff;
+  color: #fff;
   font-weight: bold;
   text-align: center;
   border-radius: 3px;
@@ -787,8 +787,6 @@ header.header div.header__bar.row div.grid-6 a.post:hover {
 
 header.header {
   padding: 10px;
-  border-bottom: 1px solid #D8D8D8;
-  background-color: #fff;
   position: fixed;
   top: 0;
   left: 0;
@@ -797,18 +795,30 @@ header.header {
   height: 62px;
 }
 
+/* .time_17to19,
+header.header {
+background-color: #f01e1e8f;
+} */
+
+
 header.header div.header__bar.row {
   position: relative;
 }
 
-header.header div.header__bar.row h1.grid-6 {
-  font-size: 20px;
+header.header div.header__bar.row h1.grid-6 a div.a-1{
+  font-size: 40px;
   line-height: 41px;
   float: left;
 }
 
-header.header div.header__bar.row h1.grid-6 a {
-  display: block;
+header.header div.header__bar.row h1.grid-6 a div.a-2{
+  font-size: 15px;
+  line-height: 55px;
+  float: left;
+}
+
+header.header div.header__bar.row h1.grid-6 a div.a-1 {
+  display: flex;
 }
 
 header.header div.header__bar.row div.grid-6 {
@@ -1091,9 +1101,7 @@ form input[type="submit"]:hover {
 footer {
   margin: 0px auto;
   padding: 10px;
-  color: #D8D8D8;
-  border-bottom: 1px solid #D8D8D8;
-  background-color: #fff;
+  color: #fff;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -1101,6 +1109,49 @@ footer {
   z-index: 5;
   height: 62px;
 }
+
+.time_5to7,
+footer,
+header.header {
+background-color: #6fddee5e;
+}
+
+.time_8to11,
+footer,
+header.header {
+background-color: #1ec2f08f;
+}
+
+.time_12to13,
+footer,
+header.header {
+background-color: #1edbf08f;
+}
+
+.time_14to16,
+footer,
+header.header {
+background-color: #c45e168f;
+}
+
+.time_17to19,
+footer,
+header.header {
+background-color: #de26116f;
+}
+
+.time_20to22,
+footer,
+header.header {
+background-color: #110630b8;
+}
+
+/* .time_23to4,
+footer,
+header.header {
+background-color: #f01e1e8f;
+} */
+
 
 footer p {
   text-align: center;
