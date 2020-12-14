@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html id="time_change1" class="time_5to7">
+<html>
   <head>
     <title>Monkey.z50j</title>
     <%= csrf_meta_tags %>
@@ -7,66 +7,56 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
    <script type="text/javascript">
     /*==== クラス切り替え関数 ====*/
 function flipCSS(){
 //--> 要素を取得
-var box = document.getElementById("time_change1");
+const time_change_header = document.querySelector("header");
+const time_change_footer = document.querySelector("footer");
+const time_change_ul = document.querySelector("ul");
 //--> 時刻（h）を取得
-var myTime = new Date();
-var myHours = myTime.getHours();
+const myTime = new Date();
+const myHours = myTime.getHours();
 //--> 「h」によってクラス名を切り替える
 if (myHours >= 5 && myHours <= 7) {
-box.className = "time_5to7"
+time_change_header.id = "time_5to7"
+time_change_footer.id = "time_5to7"
+time_change_ul.id = "time_5to7"
 } else if (myHours >= 8 && myHours <= 11) {
-box.className = "time_8to11"
+time_change_header.id = "time_8to11"
+time_change_footer.id = "time_8to11"
+time_change_ul.id = "time_8to11"
 } else if (myHours >= 12 && myHours <= 13) {
-box.className = "time_12to13"
+time_change_header.id = "time_12to13"
+time_change_footer.id = "time_12to13"
+time_change_ul.id = "time_5to7"
 } else if (myHours >= 14 && myHours <= 16) {
-box.className = "time_14to16"
+time_change_header.id = "time_14to16"
+time_change_footer.id = "time_14to16"
+time_change_ul.id = "time_14to16"
 } else if (myHours >= 17 && myHours <= 19) {
-box.className = "time_17to19"
+time_change_header.id = "time_17to19"
+time_change_footer.id = "time_17to19"
+time_change_ul.id = "time_17to19"
 } else if (myHours >= 20 && myHours <= 22) {
-box.className = "time_20to22"
+time_change_header.id = "time_20to22"
+time_change_footer.id = "time_20to22"
+time_change_ul.id = "time_20to22"
 } else if (myHours >= 23 && myHours <= 24) {
-box.className = "time_23to4"
+time_change_header.id = "time_23to4"
+time_change_footer.id = "time_23to4"
+time_change_ul.id = "time_23to4"
 } else if (myHours >= 0 && myHours <= 4) {
-box.className = "time_23to4"
+time_change_header.id = "time_23to4"
+time_change_footer.id = "time_23to4"
+time_change_ul.id = "time_23to4"
 }
 }
 setInterval(flipCSS,1000);
 </script>
-   <script type="text/javascript">
-    /*==== クラス切り替え関数 ====*/
-function flipCSS(){
-//--> 要素を取得
-var box = document.getElementById("time_change2");
-//--> 時刻（h）を取得
-var myTime = new Date();
-var myHours = myTime.getHours();
-//--> 「h」によってクラス名を切り替える
-if (myHours >= 5 && myHours <= 7) {
-box.className = "time_5to7"
-} else if (myHours >= 8 && myHours <= 11) {
-box.className = "time_8to11"
-} else if (myHours >= 12 && myHours <= 13) {
-box.className = "time_12to13"
-} else if (myHours >= 14 && myHours <= 16) {
-box.className = "time_14to16"
-} else if (myHours >= 17 && myHours <= 19) {
-box.className = "time_17to19"
-} else if (myHours >= 20 && myHours <= 22) {
-box.className = "time_20to22"
-} else if (myHours >= 23 && myHours <= 24) {
-box.className = "time_23to4"
-} else if (myHours >= 0 && myHours <= 4) {
-box.className = "time_23to4"
-}
-}
-setInterval(flipCSS,1000);
-</script>
+
   </head>
-<div id="time_change2" class="time_5to7">
   <body>
   <header class="header">
     <div class="header__bar row">
@@ -89,7 +79,6 @@ setInterval(flipCSS,1000);
           <%= link_to "新規登録", new_user_registration_path, class: "post" %>
         </div>
       <% end %>
-    </div>
     </div>
   </header>
     <%= yield %>
