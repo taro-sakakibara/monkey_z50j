@@ -642,54 +642,11 @@ ul li {
 
 /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
 
-/* .time_5to7, */
 body,
 html {
   height: 100%;
   background-color: #f5f5f3;
 }
-/* 
-.time_8to11,
-body,
-html {
-  height: 100%;
-  background-color: #43ebe5;
-}
-
-.time_12to13,
-body,
-html {
-  height: 100%;
-  background-color: #e68328;
-}
-
-.time_14to16,
-body,
-html {
-  height: 100vh;
-  background-color: #c4a718;
-}
-
-.time_17to19,
-body,
-html {
-  height: 100%;
-  background-color: #db4615;
-}
-
-.time_20to22,
-body,
-html {
-  height: 100%;
-  background-color: #272494;
-}
-
-.time_23to4,
-body,
-html {
-  height: 100%;
-  background-color: #041c63;
-} */
 
 body {
   padding-top: 60px;
@@ -708,10 +665,6 @@ body {
   color: rgb(107, 88, 88);
   font-family: 'Unica One', "Avenir", "游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro W6", "HIragino Kaku Gothic Pro W6", "HIragino Kaku Gothic Pro", Osaka, Meiryo, "メイリオ", "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
   margin: 0;
-}
-
-span{
-  color:#fff
 }
 
 a {
@@ -800,12 +753,6 @@ footer a.post:hover {
   z-index: 5;
   height: 60px;
 }
-
-/* .time_17to19,
-header.header {
-background-color: #f01e1e8f;
-} */
-
 
 header.header div.header__bar.row {
   position: relative;
@@ -970,6 +917,9 @@ div.contents.row div.content_post .more:hover ul.more_list {
   display: block;
 }
 
+.more{
+  font-size: 30px;
+}
 div.contents.row div.content_post .more ul.more_list {
   position: absolute;
   text-align: left;
@@ -998,7 +948,7 @@ div.contents.row div.content_post .more ul.more_list li a {
 
 div.contents.row div.content_post .more ul.more_list li a:hover {
   background-color: #57C3E9;
-  color: #fff;
+  color: black;
 }
 
 div.contents.row div.content_post p {
@@ -1027,7 +977,7 @@ div.contents.row div.content_post span.name {
 
 div.contents.row  span.name a {
   display: block;
-  color: #aaa;
+  color: rgb(70, 67, 67);
 }
 
 div.contents.row div.content_post span.name a:hover {
