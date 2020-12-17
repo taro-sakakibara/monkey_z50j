@@ -4,13 +4,12 @@
             <%= link_to '×', tweet_path(tweet.id), method: :delete %>
           <%end%>
       </div>
-      <span class="name">
-      <a href="/users/<%= tweet.user.id %>">
-          <span>投稿者</span><%= tweet.user.nickname %>
-        </a>
-      </span>
-      <div class="text_area">
-      <p><%= tweet.created_at.strftime('%Y/%m/%d') %></p>
-      <p><%= tweet.text %></p>
-      </div>
     </div>
+
+      <div class="text_area">
+      <p class="date"><%= tweet.created_at.strftime('%Y/%m/%d') %></p>
+            <a href="/users/<%= tweet.user.id %>" class="user">
+          <span>投稿者:</span><%= tweet.user.nickname %>
+        </a>
+      <p class="text"><%= tweet.text %></p>
+      </div>
