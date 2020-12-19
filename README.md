@@ -106,9 +106,9 @@ Pass: 2222</br>
 
 ## ローカルでの動作方法
 下記コマンドの実施をお願いいたします。</br>
-% git clone https://github.com/taro-sakakibara/monkey_z50j.git
-% cd monkey_z50j
-% bundle install
-% yarn install
-% rails db:create
-% rails db:migrate
+% git clone https://github.com/taro-sakakibara/monkey_z50j.git</br>
+% cd monkey_z50j </br>
+% bundle install</br>
+% yarn install</br>
+% rails db:create</br>
+% rails db:migrate</br>
