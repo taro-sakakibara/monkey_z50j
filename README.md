@@ -5,7 +5,7 @@ monkey.z50jは時間帯ごとにトップページの表示が切り変わる写
 
 ## 開発状況
 開発環境</br>
-Ruby/Ruby on Rails/MySQL/Github/AWS/Visual Studio Code</br>
+Ruby6.0/Ruby on Rails/MySQL/Github/AWS/Visual Studio Code</br>
 開発期間と平均作業時間</br>
 開発期間：12/7~12/17(10日間)</br>
 1日あたりの平均作業時間：5</br>
@@ -105,6 +105,10 @@ Pass: 2222</br>
 - belongs_to :tweet
 
 ## ローカルでの動作方法
-1.画面右上より新規登録を行い、ユーザー登録を行う※全項目必須</br>
-2.画面下部の＋ボタンより、新規投稿を行う。</br>
-3.投稿は各カテゴリーの時間帯ごとに、全ての投稿者の全ての投稿からランダムに一つ表示される。</br>
+下記コマンドの実施をお願いいたします。</br>
+% git clone https://github.com/taro-sakakibara/monkey_z50j.git
+% cd monkey_z50j
+% bundle install
+% yarn install
+% rails db:create
+% rails db:migrate
